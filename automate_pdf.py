@@ -7,11 +7,6 @@ from os import listdir
 from os.path import isfile, join
 from pathlib import Path
 
-# TODO: 1. Read pdf file or convert to CSV
-#  2. Search in file for VO number and add to list
-#  3. Search in file for serial number, 17B, 18B or 19B
-#  4. Subtract the SKU number from the number and add to list#
-
 class AutomateReadPdf:
     def __init__(self):
         self.serialnum = []
@@ -36,23 +31,6 @@ class AutomateReadPdf:
         #     self.lst19B = []
         # if lstVO is None:
         #     self.lstVO = []
-
-# TODO: Scrath code. Can possibly be removed.
-
-    #
-    # self.pdf_folder = Path('/Users/tom/Desktop/testDocs/PDF')
-    # self.CSV_folder = Path('/Users/tom/Desktop/testDocs/CSV')
-    # for pdf in self.pdf_folder:
-    #     while self.index < len(pdf):
-    #
-    #
-    # onlyfiles = [f for f in listdir('/Users/tom/Desktop/testDocs') if isfile(join('/Users/tom/Desktop/testDocs', f))]
-    # for file in onlyfiles:
-    #     while self.index < len(file):
-
-    # self.object = PyPDF2.PdfFileReader('/Users/tom/Desktop/testDocs/21VO023504.pdf')
-    # self.df = tabula.read_pdf('/Users/tom/Desktop/testDocs/21VO023504.pdf', pages='all')
-    # self.df_csv = tabula.convert_into('/Users/tom/Desktop/testDocs/21VO023504.pdf', 'test.csv', output_format="csv", pages='all')
 
     def readPdf(self):
         cols = ['VO number', '17B', '18B', '19B']
